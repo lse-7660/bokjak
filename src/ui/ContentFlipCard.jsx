@@ -114,13 +114,14 @@ const ContentFlipCard = ({ content }) => {
                                 )[0]
                             }
                         </span>
-                        {content.genre_names
-                            .slice(0, 3)
-                            .map((item, idx) => (
-                                <span key={idx}>
-                                    {item}
-                                </span>
-                            ))}
+                        {content.genre_names &&
+                            content.genre_names
+                                .slice(0, 3)
+                                .map((item, idx) => (
+                                    <span key={idx}>
+                                        {item}
+                                    </span>
+                                ))}
                     </div>
                     <p className="content-flip-card-desc">
                         {content.overview || ''}
